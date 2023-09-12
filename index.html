@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Tracker</title>
+    <link rel="shortcut icon" href="clock-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body class="bg-slate-100">
+<div class="flex items-center lg:flex-row flex-col">
+  <!-- to do list start -->
+  <div >
+    <h1 class="text-2xl font-semibold text-center ">To Do List</h1>
+     <div class="flex flex-row  items-center gap-5">
+    <div class="  flex flex-col py-3 justify-center gap-1 ">
+      <button class=" text-black border-2 border-black  px-1 py-1  text-sm" onclick="weeki(7);">Mon</button>
+      <button class="text-black border-2 border-black  px-1 py-1  text-sm" onclick="weeki(2);">Tue</button>
+    <button class="text-black border-2 border-black  px-1 py-1  text-sm">Wed</button>
+      <button class="text-black border-2 border-black  px-1 py-1  text-sm">Thu</button>
+      <button class="text-black border-2 border-black  px-1 py-1  text-sm">Fri</button>
+      <button class="text-black border-2 border-black  px-1 py-1  text-sm">Sat</button>
+      <button class="text-black border-2 border-black  px-1 py-1  text-sm">Sun</button>
+      
+   </div>
+<div class="bg-[#ffff1b] text-black border-black w-40 h-52 text-xs p-2">
+  <li>Maths Exam 6days left</li>
+</div>
+  </div>
+<input type="text" class="outline-none border w-48 ms-7 border-black py-[0.10rem]   px-1">
+<button class="bg-slate-800 text-white py-[0.10rem] px-2 font-semibold">ToDo</button>
+</div>
+ 
+  <!-- to do list start -->
+
+    <div class="mx-auto pb-5 pt-1 mt-1 bg-white px-5 rounded-md">
+        <h1 class="text-2xl text-center font-bold">Time tracker</h1>
+
+      <div class="flex flex-row w-full ">
+        <h1 class="me-auto text-xl text-black">studied x <span  class="study text-green-400" id="study"></span></h1>
+        <h1 class="ms-auto text-xl text-black">Wasted x <span  class="wastedTime text-red-400" id="wastedTime"></span></h1>
+      </div>
+       <div class="  flex flex-row py-3 justify-center gap-3 items-center">
+          <button class="text-white bg-red-500 px-3 py-1 rounded-md text-xl" onclick="weeki(7);">Mon</button>
+          <button class="text-white px-3 py-1 bg-blue-500 rounded-md text-xl" onclick="weeki(2);">Tue</button>
+          <button class="text-white bg-yellow-500 px-3 py-1 rounded-md text-xl" onclick="weeki(3);">Wed</button>
+          <button class="text-white bg-green-500 px-3 py-1 rounded-md text-xl" onclick="weeki(4);">Thu</button>
+          <button class="text-white bg-pink-500 px-3 py-1 rounded-md text-xl" onclick="weeki(5);">Fri</button>
+          <button class="text-white bg-purple-500 px-3 py-1 rounded-md text-xl" onclick="weeki(6);">Sat</button>
+          <button class="text-white bg-slate-500 px-3 py-1 rounded-md text-xl" onclick="weeki(1);">Sun</button>
+          
+       </div>
+        <div class="flex mx-auto w-72 justify-center items-center flex-row">
+          <input
+            id="task"
+            type="text"
+            class="border border-slate-500 outline-none py-1 px-3 "
+          /><button
+            id="log"
+            class="bg-blue-600 text-white px-5 py-1 "
+            type="submit"
+          >
+            Log
+          </button>
+        </div>
+      
+        <ul id="ul" class="py-3 w-96 mx-auto ul px-1"></ul>
+      </div>
+       <div class="chart-container">
+        <canvas id="activityChart"></canvas>
+</div>
+ <div class="flex flex-col p-5 mx-start gap-4">
+    
+    <button class="sm:rounded-full text-sm bg-gradient-to-tr from-slate-500 to-slate-200 p-2" onclick="reset();">Reset Week</button>
+    <button class="sm:rounded-full text-sm text-white bg-gradient-to-tr from-orange-500 to-red-500 p-2" onclick="day();">Reset Day</button>
+    <button class="sm:rounded-full text-sm text-white bg-gradient-to-tr from-purple-500 to-slate-700 p-2" onclick="undo();">Undo</button>
+ </div>   
+
+</div>
+
+    
+   
+
+    <script src="script.js"></script>
+    <script src="trackerpie.js"></script>
+  </body>
+</html>

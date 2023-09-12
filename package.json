@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "pie": "^10.6.4",
+    "vite": "^4.4.9",
+    "vue": "^3.3.4"
+  }
+}
